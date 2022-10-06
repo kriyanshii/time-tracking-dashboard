@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+  --blue: hsl(246, 80%, 60%);
+  --light-red : hsl(15, 100%, 70%);
+  --soft-blue : hsl(195, 74%, 62%);
+  --light-red : hsl(348, 100%, 68%);
+  --lime-green : hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --soft-orange: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  /* margin: 0; */
+  font-family: 'Rubik',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--very-dark-blue);
+  font-size: 18px;
+  color: white;
+}
+
+.card{
+  position: relative;
+  width: 200px;
+  height: 195px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  /* text-align: left; */
+}
+
+.card img{
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.data{
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  /* text-align: left; */
+}
+
+.title{
+  display: flex;
+  justify-content: space-around;
+}
+
+.title p{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.title > .eclips{
+  height: 3px;
+  width: 15px;
+  margin-top: 25px;
+}
+
+.timeframes{
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timeframes > .current{
+  font-size: 45px;
+}
+
+.timeframes > .previous{
+  font-size: 14px;
+  color: var(--pale-blue);
+  opacity: 0.7;
+}
+
+.card-container{
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.dashboard{
+  display: flex;
+  margin: 100px 200px;
+}
+
+.info-card{
+  background-color: var(--dark-blue);
+  height: 430px;
+  text-align: left;
+  width: 200px;
+  border-radius: 10px;
+  /* padding: 25px; */
+}
+
+.hero-img{
+  width: 70px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.person-info{
+  height: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--blue);
+}
+
+.person-info  p{
+  font-size: 15px;
+  color: var(--pale-blue);
+
+}
+
+.name{
+  font-size: 35px;
+  font-weight: 300;
+  /* opacity: 0.7; */
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 25px;
+}
+
+.container > button{
+  background-color: var(--dark-blue);
+  border: 0px transparent;
+  color: var(--pale-blue);
+  font-family: 'Rubik';
+  padding: 10px;
+}
+
+button:hover{
+  color: white;
+}
+
+button:focus{
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboard{
+    margin: 0px;
+    /* width: 100%; */
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .dashboard{
+    display: flex;
+    flex-direction: column;
+    /* margin: 0px; */
+    /* width: 100%; */
+  }
+
+  .card-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .card {
+    width: 100%;
+  }
+  .data {
+    width: 100%;
+
+  }
+  .info-card{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+  }
+
+  .person-info{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .person-info span{
+    font-size: 20px;
+  }
+
+  .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .timeframes{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+  }
+
+  .timeframes .current{
+    font-size: 30px;
+  }
+}
